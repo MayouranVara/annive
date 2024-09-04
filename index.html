@@ -146,13 +146,27 @@
         <div class="nine">
             <p>J'espere que tu as aimée et que tu vas passer un excellent mois de Septembre </p>
             <p id="replay">Tu peux recliker si tu veux revoir.</p>
-            <button class="button" onclick="location.href='date.html'">
+            <button class="button" onclick="location.href='tucroyais.html'">
             Tu veux voir tes kdo ? Clique ici
             </button> 
             <p class="last-smile">:)</p>
         </div>
     </div>
-
+  
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  
 </body>
     <!-- Greensock -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
